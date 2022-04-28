@@ -59,7 +59,7 @@ Each day they can send their Wolf(NFT) on a mission. They will have three option
 This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
 
 
-# 🤝 Contributing to `TryShape`
+# 🤝 Contributing to `Paths of Salvation Game`
 Any kind of positive contribution is welcome! Please help us to grow by contributing to the project.
 
 If you wish to contribute, you can work on any features [listed here](https://github.com/TryShape/tryshape#-upcoming-features) or create one on your own. After adding your code, please send us a Pull Request.
