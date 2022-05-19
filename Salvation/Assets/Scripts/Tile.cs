@@ -6,8 +6,8 @@ using UnityEngine;
 public class Tile
 {
     public Building buildingRef;
-    public bool occupied;
     public ObstacleType obstacleType;
+    bool isStartedTile = true;
 
 
     public enum ObstacleType
@@ -16,16 +16,14 @@ public class Tile
         Resource,
         Building
     }
-
+    #region methods
     public void SetOccupied(ObstacleType t)
     {
-        occupied = true;
         obstacleType = t;
     }
 
     public void SetOccupied(ObstacleType t, Building b)
     {
-        occupied = true;
         obstacleType = t;
         buildingRef = b;
     }
@@ -33,8 +31,32 @@ public class Tile
     public void CleanTile()
     {
         obstacleType = ObstacleType.None;
-        occupied = false;
 
     }
+
+    public void StarterTileValue(bool value)
+    {
+        isStartedTile = value;
+    }
+
+    #endregion
+    #region bool functions
+
+    public bool IsOccupied
+    {
+        get
+        {
+            return obstacleType != ObstacleType.None;
+        }
+    }
+
+    public bool CanSpawnObstacle
+    {
+        get
+        {
+            return !isStartedTile;
+        }
+    }
+    #endregion
 }
 

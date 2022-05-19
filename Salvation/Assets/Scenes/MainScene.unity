@@ -1119,7 +1119,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590113659}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2116,7 +2116,7 @@ GameObject:
   - component: {fileID: 1225904836}
   - component: {fileID: 1225904837}
   m_Layer: 5
-  m_Name: GoldSlider
+  m_Name: StoneSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2862,6 +2862,8 @@ GameObject:
   - component: {fileID: 1798438990}
   - component: {fileID: 1798438989}
   - component: {fileID: 1798438991}
+  - component: {fileID: 1798438992}
+  - component: {fileID: 1798438993}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2914,6 +2916,57 @@ MonoBehaviour:
   levelLength: 20
   tilesHolder: {fileID: 1787909620}
   tileSize: 1
+  tileEndHeight: 0.8
+  woodPrefap: {fileID: 873367879290114121, guid: 59fbf51253bdcdf4e8b443339d248c2e, type: 3}
+  rockPrefap: {fileID: 6375247617902183649, guid: ce059023babf9044ba9cf2ed3517a742, type: 3}
+  obstacleChange: 0.5
+  xBounds: 4
+  zBounds: 4
+--- !u!114 &1798438992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798438988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079230d5d8ad7c84da5c1a7463b92443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWood: 200
+  maxStone: 200
+  maxPremiumC: 500
+  maxStandardC: 500
+  debugBool: 1
+--- !u!114 &1798438993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798438988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f582ea2c690139b4592e5f28c33ab80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodUI:
+    Slider: {fileID: 514394962}
+    maxUI: {fileID: 1695507427}
+    currentUI: {fileID: 1872941824}
+  stoneUI:
+    Slider: {fileID: 1225904837}
+    maxUI: {fileID: 129187205}
+    currentUI: {fileID: 983262951}
+  standardCUI:
+    Slider: {fileID: 961084464}
+    maxUI: {fileID: 590113661}
+    currentUI: {fileID: 402687954}
+  premiumCUI:
+    Slider: {fileID: 53594038}
+    maxUI: {fileID: 384675298}
+    currentUI: {fileID: 1191587964}
 --- !u!1 &1872941821
 GameObject:
   m_ObjectHideFlags: 0
