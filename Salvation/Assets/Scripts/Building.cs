@@ -14,6 +14,12 @@ public class Building
     // Y -axis to the grid
     public int length = 0;
 
+    // vitual of the building
+    public GameObject buildingModel;
+
+    // Small padding in case the building is clipping through the floort
+    public float yPadding = 0;
+
   //Type of the Building
     public ResourceType resourceType = ResourceType.None;
 

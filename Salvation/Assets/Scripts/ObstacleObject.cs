@@ -6,6 +6,7 @@ public class ObstacleObject : MonoBehaviour
 {
     public ObstacleType obstacleType;
     public int resourceAmount = 10;
+    TileObject refTile;
 
     private void OnMouseDown()
     {
@@ -26,11 +27,17 @@ public class ObstacleObject : MonoBehaviour
 
         if (usedResources)
         {
+            refTile.data.CleanTile();
             Destroy(gameObject);
         }
         else
             Debug.Log("not destroyed");
 
+    }
+
+    public void SetTileReference(TileObject obj)
+    {
+        refTile = obj;
     }
 
     public enum ObstacleType{
