@@ -43,6 +43,12 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
+    public void IncreaceMaxWood(int amount)
+    {
+        maxWood += amount;
+        UIManager.Instance.UpdateWoodUI(wood, maxWood);
+    }
+
     public bool AddWood(int amount)
     {
 
@@ -58,6 +64,12 @@ public class ResourceManager : MonoBehaviour
         }
 
 
+    }
+
+    public void IncreaceMaxStone(int amount)
+    {
+        maxStone += amount;
+        UIManager.Instance.UpdateWoodUI(stone, maxStone);
     }
 
     public bool AddStone(int amount)
