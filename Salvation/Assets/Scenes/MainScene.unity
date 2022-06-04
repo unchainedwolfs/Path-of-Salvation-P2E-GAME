@@ -1937,6 +1937,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026742195}
   m_CullTransparentMesh: 1
+--- !u!1 &1078876840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078876841}
+  m_Layer: 0
+  m_Name: ResourcesHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1078876841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078876840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1179261424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,7 +2914,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cc29c9d4e6660944995af30be0b8a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingsDatabase: []
+  buildingsDatabase:
+  - buildingID: 1
+    width: 2
+    length: 2
+    buildingModel: {fileID: 2851296287431645834, guid: fcf8a1529abd8ea418825dca303618ed, type: 3}
+    yPadding: 0
+    resourceType: 0
 --- !u!4 &1798438990
 Transform:
   m_ObjectHideFlags: 0
@@ -2919,9 +2956,11 @@ MonoBehaviour:
   tileEndHeight: 0.8
   woodPrefap: {fileID: 873367879290114121, guid: 59fbf51253bdcdf4e8b443339d248c2e, type: 3}
   rockPrefap: {fileID: 6375247617902183649, guid: ce059023babf9044ba9cf2ed3517a742, type: 3}
+  resourcesHolder: {fileID: 1078876841}
   obstacleChange: 0.5
   xBounds: 4
   zBounds: 4
+  buildingToPlace: {fileID: 1081726945979866646, guid: 4392110866ddca04a8231bf83b0201de, type: 3}
 --- !u!114 &1798438992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2938,7 +2977,7 @@ MonoBehaviour:
   maxStone: 200
   maxPremiumC: 500
   maxStandardC: 500
-  debugBool: 1
+  debugBool: 0
 --- !u!114 &1798438993
 MonoBehaviour:
   m_ObjectHideFlags: 0
